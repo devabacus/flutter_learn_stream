@@ -5,15 +5,20 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
 
-  Future<String> HelloAsync() async {
-    await Future.delayed(Duration(seconds: 3));
+  Future<String> helloAsync() async {
+    await Future.delayed(Duration(seconds: 5));
     return 'Message from future';
   }
 
-
+  test() async{
+      String x = await helloAsync();
+      print(x);
+  }
 
   @override
   Widget build(BuildContext context) {
+    test();
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
