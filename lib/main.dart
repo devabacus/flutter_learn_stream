@@ -26,7 +26,9 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(title: Text("Stream learn"),),
-        body: Text("hello"),
+        body: Column(children: <Widget>[
+          RaisedButton(child: Text('Задержка 5 сек'), onPressed: test,)
+        ],)
       ),
     );
   }
